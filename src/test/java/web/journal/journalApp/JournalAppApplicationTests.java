@@ -10,4 +10,5 @@ class JournalAppApplicationTests {
 	void contextLoads() {
 	}
 
+
 }

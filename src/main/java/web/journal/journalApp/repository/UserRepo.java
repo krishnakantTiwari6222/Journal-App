@@ -2,8 +2,10 @@ package web.journal.journalApp.repository;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import web.journal.journalApp.entuity.JournalEntry;
+import web.journal.journalApp.entity.User;
 
-public interface JournalEntryRepo extends MongoRepository<JournalEntry, ObjectId> {
+public interface UserRepo extends MongoRepository<User, ObjectId> {
+    User findByUserName(String username);
 
+    void deleteByUserName(String username);
 }
